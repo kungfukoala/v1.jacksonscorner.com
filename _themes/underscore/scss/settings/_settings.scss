@@ -1,0 +1,100 @@
+////////////////////
+//////////////////
+//
+// Underscore
+// Application
+// SETTINGS
+// v 1.1
+//
+// TABLE OF CONTENTS
+//
+//	B A S E
+//  Asset Paths = Define where your assets live
+//  Default Width = Default center width for Center mixin
+//  Breakpoints = For media quieries
+//  Grid = Bourbon Neat Grid Settings
+//	V I S U A L
+//  Colors =
+//  Typography = 
+//  Z Index - May not need...
+//
+//////////////////
+////////////////////
+// Asset Paths
+////////////////////
+$img-scaled-assetpath: 	"/_themes/underscore/img-scaled/";
+$img-assetpath: 	"/_themes/underscore/img/";
+$font-assetpath:	"/_themes/underscore/fonts/";
+////////////////////
+// Default Width
+////////////////////
+$default-width:		960px;
+////////////////////
+// Grid
+////////////////////
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 1) !default; // Gutter between each two columns
+$grid-columns: 12 !default; // Total number of columns in the grid
+$max-width: em(1088) !default; // Max-width of the outer container
+$border-box-sizing: true !default; // Makes all elements have a border-box layout
+$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+$default-layout-direction: LTR !default;
+// Visual Grid
+$visual-grid: false !default; // Display the base grid
+$visual-grid-color: #aaa !default;
+$visual-grid-index: front !default; // Show grid behind content (back) or overlay it over the content (front)
+$visual-grid-opacity: 0.4 !default;
+$visual-grid-breakpoints: () !default;
+////////////////////
+//
+// Colors
+//
+////////////////////
+$primary:			rgb(0,0,0); // Black
+$secondary:			rgb(218,125,89);  // Orange
+$tertiary:			rgb(255,255,255); // White
+
+$cream:				rgb(217,215,186);
+$orange:			rgb(199,78,54);
+$grey:				rgb(177,177,177);
+////////////////////
+//
+// Typography
+//
+////////////////////
+$base-font-size:	em(14);
+$font-small:		em(12);
+$font-medium:		em(18);
+$font-large:		em(22);
+
+
+$primary-font: 		"futura-pt", helvetica, san-serif;
+$secondary-font: 	"pacific-northwest", georgia, serif;
+$tertiary-font: 	"mrs-ant", georgia, serif;
+////////////////////
+//
+// Images
+//
+////////////////////
+$navigation-sprite:	"navigation_1.3.png";
+%navigation-sprite { background:url(#{$img-assetpath}#{$navigation-sprite}); }
+$embellishment-sprite:	"embellishments_1.png";
+%embellishment-sprite { background:url(#{$img-assetpath}#{$embellishment-sprite}); }
+$hover-sprite:	"hover_border.png";
+%hover-sprite { background:url(#{$img-assetpath}#{$hover-sprite}); }
+////////////////////
+//
+// Z-Index
+//
+////////////////////
+$z-min-navigation:	1000;
+$z-navigation:		900;
+$z-content:			200;
+$z-backgrounds:		100;
+$z-level-1:			700;
+$z-level-2:			600;
+$z-level-3:			500;
+$z-level-4:			400;
+
+
+

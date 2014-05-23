@@ -1,0 +1,22 @@
+title: Menus
+
+fields:
+  breakfast:
+    type: file
+    destination: assets/pdf
+	
+  lunch:
+    type: file
+    destination: assets/pdf
+
+  dinner:
+    type: file
+    destination: assets/pdf
+	
+  kids:
+    type: file
+    destination: assets/pdf
+
+  drinks:
+    type: file
+    destination: assets/pdf

@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+{{ theme:partial src="header" }}
+<body>
+	{{ theme:partial src="navigation" }}
+	<div id="contents" class="contents">
+		<div id="menus" class="menus">
+			<div id="food-drink-section"></div>
+			<div id="border-top" class="border-top"></div>
+			<div id="content-background" class="content-background">
+				<div id="content" class="content">
+					<ul id="menu-downloads" class="menu-downloads">
+						<li><h3 class="menu-download-title">Menus</h3></li>
+						{{ get_content from="menus" }}
+						<li class="breakfast-menu"><a href="{{ breakfast }}" target="_blank">Breakfast</a></li>
+						<li class="lunch-menu"><a href="{{ lunch }}" target="_blank">Lunch</a></li>
+						<li class="dinner-menu"><a href="{{ dinner }}" target="_blank">Dinner</a></li>
+						<li class="kids-menu"><a href="{{ kids }}" target="_blank">Kids</a></li>
+						<li class="drinks-menu"><a href="{{ drinks }}" target="_blank">Drinks</a></li>
+						{{ /get_content }}
+					</ul>
+					<div id="hidden-coachmark" class="hidden-coachmark"></div>
+					<div class="cow-frame"><a class="toggle-beef" href=""></a></div>
+					<div class="cow"></div>
+					<div class="milk"><a class="toggle-milk" href=""></a></div>
+					<div class="mushroom-frame"></div>
+					<div class="mushrooms"></div>
+					<div id="season" class="season">
+						<div id="season-header" class="season-header">
+							<h2 class="season-h2">Food of the Season</h2>
+						</div>
+						<div id="season-divide" class="season-divide"></div>
+						<ul id="season-items" class="season-items">
+							{{ entries:listing folder="season" limit="4" }}
+							<li class="season-item">
+								<h2>{{ title }}</h2>
+								<p>{{ content|widont }}</p>
+							</li>
+							{{ /entries:listing }}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="border-bottom" class="border-bottom"></div>
+		</div>
+		<div id="find-us" class="find-us">
+			<div id="find-us-section"></div>
+			<div id="border-top" class="border-top"></div>
+			<div id="content-background" class="content-background">
+				<div id="content" class="content">
+					<div class="open-schedule">
+						Mon. - Sun.
+						<div class="open-divide"></div>
+						<span class="open-time">7AM - 9PM</span>
+					</div>
+					<div class="bread-cheese-frame"><a class="toggle-flour" href=""></a></div>
+					<div class="bread-cheese"></div>
+					<div class="phone">541.647.2198</div>
+					<div class="fish"></div>
+					<div class="map-large">
+						<small><a href="https://maps.google.com/maps?client=safari&amp;oe=UTF-8&amp;ie=UTF8&amp;q=Jackson's+Corner&amp;fb=1&amp;gl=us&amp;hq=jacksons+corner&amp;cid=16094575148923982313&amp;t=m&amp;ll=44.055256,-121.316614&amp;spn=0.004703,0.011802&amp;z=16&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+					</div>
+					<div class="map">
+						<div class="google-map">
+						<iframe width="550" height="330"  src="https://maps.google.com/maps?client=safari&amp;oe=UTF-8&amp;ie=UTF8&amp;q=Jackson's+Corner&amp;fb=1&amp;gl=us&amp;hq=jacksons+corner&amp;cid=16094575148923982313&amp;t=m&amp;ll=44.055256,-121.316614&amp;spn=0.004703,0.011802&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+						</div>
+					</div>
+					<div class="map-frame"></div>
+				</div>
+			</div>
+			<div id="border-bottom" class="border-bottom"></div>
+		</div>
+		<div id="about" class="about">
+			<div id="about-section"></div>
+			<div id="border-top" class="border-top"></div>
+			<div id="content-background" class="content-background">
+				<div id="content" class="content">
+					<div class="about-copy">
+						<h1>About</h1>
+						{{ get_content from="about" }}
+						    {{ content }}
+						{{ /get_content }}
+					</div>
+					<div id="press-container" class="press-container">
+						<h2 class="press-header">Press</h2>
+						<div id="diamond-border" class="diamond-border"></div>
+						<ul id="press-items" class="press-items">
+							{{ entries:listing folder="press" limit="3" }}
+							<li class="press-item">
+								<h2>{{ title }}</h2>
+								<p>{{ content|widont }}</p>
+							</li>
+							{{ /entries:listing }}
+						</ul>
+					</div>
+					<div class="rooster-frame"><a class="toggle-chicken" href=""></a></div>
+					<div id="rooster" class="rooster"></div>
+					<div class="strawberries-frame"></div>
+					<div id="strawberries" class="strawberries"></div>
+					<div id="footer" class="footer">Copyright {{ current_date format="Y"}} - Jackson's Corner</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="backgrounds" class="backgrounds">
+		<div id="backgrounds" class="home-image"></div>
+		<div id="backgrounds" class="second-image"><img src="_themes/underscore/img-scaled/green_salami_2.jpg" alt="Fresh meats and produce - Jackson's Corner Restaurant"></div>
+		<div id="third-image" class="third-image">
+			<div id="slideshow" class="slideshow">
+				<img src="_themes/underscore/img-scaled/kale_wood.jpg"  alt="Fresh local vegetables - Jackson's Corner Restaurant">
+				<img src="_themes/underscore/img-scaled/turnips_green.jpg"  alt="Homemade Pasta - Jackson's Corner Restaurant">
+			</div>
+		</div>
+		<div id="fourth-image" class="fourth-image">
+			<img src="_themes/underscore/img-scaled/pasta_machine.jpg"  alt="Homemade Pasta - Jackson's Corner">
+		</div>
+	</div>
+	<div id="hover-eggs" class="hover-eggs">
+		<div id="hover-border" class="hover-border-top"></div>
+		<h3>Eggs and Dairy</h3><br>
+		<p><strong>Eggs</strong> - Great American Egg is a family owned farm in Powell Butte, Oregon that has the highest standards for raising animals. We are proud and honored to be able to use their eggs in our dishes.</p>
+		<p><strong>Dairy</strong> - Eberhards Dairy is a family owned business has been supplying central Oregon with dairy products since 1951. They work only with sustainable farms that refuse the use of growth hormones.</p>
+		<a href="" class="close-gem">Close</a>
+		<div id="hover-border" class="hover-border-bottom"></div>
+	</div>
+	<div id="hover-pork" class="hover-pork">
+		<div id="hover-border" class="hover-border-top"></div>
+		<h3>Pork</h3><br>
+		<p>Calrton farms has been crafting natural meats in the northwest for over 50 years. They hand pick all of their animals which means that all of their animals must be raised and handled in a humane manner. They have had Dr. Temple Grandin, the foremost advocate for humane animal handling, review their facility to ensure that they comply with her ideals and guidelines. See http://grandin.com</p>
+		<a href="" class="close-gem">Close</a>
+		<div id="hover-border" class="hover-border-bottom"></div>
+	</div>
+	<div id="hover-chicken" class="hover-chicken">
+		<div id="hover-border" class="hover-border-top"></div>
+		<h3>Chicken</h3><br>
+		<p>Draper Valley Farms is the pioneer of Washington and Oregon-raised fresh chicken since 1935. They do not use any antibiotics, hormones or preservatives and have an audit trail for each flock.</p>
+		<a href="" class="close-gem">Close</a>
+		<div id="hover-border" class="hover-border-bottom"></div>
+	</div>
+	<div id="hover-flour" class="hover-flour">
+		<div id="hover-border" class="hover-border-top"></div>
+		<h3>Flour/Wheat</h3><br>
+		<p>Shepherds grain is basically the definition of sustainable farming. Quality farming practices result in the best flour possible. We can trace every bag to the farm in which it was grown.</p>
+		<a href="" class="close-gem">Close</a>
+		<div id="hover-border" class="hover-border-bottom"></div>
+	</div>
+	<div id="hover-beef" class="hover-beef">
+		<div id="hover-border" class="hover-border-top"></div>
+		<h3>Beef</h3><br>
+		<p>The ranchers at Country Natural Beef are true stewards of the land. They are focused on the sustainability of their families and their communities. Founded on the principal of providing their customers with healthy and wholesome products. Thanks!</p>
+		<a href="" class="close-gem">Close</a>
+		<div id="hover-border" class="hover-border-bottom"></div>
+	</div>
+</body>
+</html>
